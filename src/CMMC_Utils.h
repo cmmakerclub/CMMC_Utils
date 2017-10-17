@@ -29,10 +29,9 @@ public:
     }
 
     void dump(const u8* data, size_t size) {
-      for (size_t i = 0; i < size - 1; i++) {
+      for (size_t i = 0; i < size; i++) {
         Serial.printf("%02x ", data[i]);
       }
-      Serial.printf("%02x", data[size - 1]);
       Serial.println();
     }
 
