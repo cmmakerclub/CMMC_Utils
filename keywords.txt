@@ -15,6 +15,7 @@ Utils		KEYWORD1
 begin 					KEYWORD2
 convertMacStringToUint8	KEYWORD2
 printMacAddress		KEYWORD2
+getESPNowSlaveMacAddress		KEYWORD2
 dump	KEYWORD2
 macByteToString	KEYWORD2
 
