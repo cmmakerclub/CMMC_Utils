@@ -56,13 +56,15 @@ public:
 
      static uint8_t* getESPNowControllerMacAddress() {
        static uint8_t _controller_macaddr[6];
+       bzero(_controller_macaddr, 6);
        wifi_get_macaddr(STATION_IF, _controller_macaddr);
        return _controller_macaddr;
      }
 
      static uint8_t* getESPNowSlaveMacAddress() {
        static uint8_t _slave_macaddr[6];
-       wifi_get_macaddr(SOFTAP_IF, _slave_macaddr);
+       bzero(_slave_macaddr, 6);
+       wifi_get_macaddr(STATION_IF, _slave_macaddr);
        return _slave_macaddr;
      }
 
